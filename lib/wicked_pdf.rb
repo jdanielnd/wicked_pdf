@@ -61,8 +61,8 @@ class WickedPdf
     pdf = generated_pdf_file.read
     raise "PDF could not be generated!\n Command Error: #{err}" if pdf and pdf.rstrip.length == 0
     pdf
-  rescue Exception => e
-    raise "Failed to execute:\n#{command}\nError: #{e}"
+  # rescue Exception => e
+  #   raise "Failed to execute:\n#{command}\nError: #{e}"
   ensure
     string_file.close! if string_file
     generated_pdf_file.close! if generated_pdf_file
